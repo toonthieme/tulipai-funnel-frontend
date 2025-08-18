@@ -84,4 +84,5 @@ export interface Submission extends FormData {
   submittedAt: string;
   status: SubmissionStatus;
   proposalSentAt?: string;
+  notes?: string;
 }

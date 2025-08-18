@@ -1,5 +1,5 @@
 import axios, { AxiosError } from 'axios';
-import { Submission, FormData } from '../types';
+import { Submission, FormData, SubmissionStatus } from '../types';
 
 // Create axios instance with default config
 const api = axios.create({
@@ -93,7 +93,7 @@ export const submissions = {
         solutions: formData.solutions,
         budget: formData.budget,
         timeline: formData.timeline,
-        status: formData.status,
+        status: SubmissionStatus.New,
         generatedQuote: formData.generatedQuote,
         isQuoteLoading: formData.isQuoteLoading,
         notes: formData.internalNotes // Map internalNotes to notes
@@ -173,7 +173,7 @@ function handleApiError(error: AxiosError) {
     window.location.href = '/';
   }
   
-  const message = error.response?.data?.message || error.message || 'An error occurred';
+  const message = error.response?.data?.message || (error as Error).message || 'An error occurred';
   console.error('API Error:', message);
   throw new Error(message);
 }
