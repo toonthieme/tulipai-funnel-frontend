@@ -166,14 +166,14 @@ export const submissions = {
 };
 
 // Error handling
-function handleApiError(error: AxiosError) {
+function handleApiError(error: AxiosError | any) {
   if (error.response?.status === 401) {
     // Unauthorized - clear token and redirect to login
     auth.logout();
     window.location.href = '/';
   }
   
-  const message = error.response?.data?.message || (error as Error).message || 'An error occurred';
+  const message = error.response?.data?.message || error.message || 'An error occurred';
   console.error('API Error:', message);
   throw new Error(message);
 }
