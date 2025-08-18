@@ -1,0 +1,6 @@
+{
+  "name": "TulipAI Intake Funnel",
+  "description": "A structured 8-step funnel to collect business context and generate a personalized AI proposal for SME users.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

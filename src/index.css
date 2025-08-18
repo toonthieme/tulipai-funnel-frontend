@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-gray-100;
+  }
+  
+  input, select, textarea {
+    @apply text-gray-900 bg-white rounded-lg border-gray-300;
+  }
+  
+  button {
+    @apply text-white;
+  }
+}
+
+@layer components {
+  .glassmorphism {
+    @apply bg-black/50 backdrop-blur-lg border border-white/10;
+  }
+
+  .slider-thumb {
+    @apply appearance-none cursor-pointer h-2 bg-gray-700 rounded-full;
+  }
+
+  .slider-thumb::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 bg-purple-600 rounded-full transition-colors;
+  }
+
+  .slider-thumb::-webkit-slider-thumb:hover {
+    @apply bg-purple-500;
+  }
+
+  .slider-thumb::-moz-range-thumb {
+    @apply w-5 h-5 bg-purple-600 rounded-full border-0 transition-colors;
+  }
+
+  .slider-thumb::-moz-range-thumb:hover {
+    @apply bg-purple-500;
+  }
+
+  .slider-thumb:focus {
+    @apply outline-none;
+  }
+
+  .slider-thumb:focus::-webkit-slider-thumb {
+    @apply ring-4 ring-purple-500/30;
+  }
+
+  .slider-thumb:focus::-moz-range-thumb {
+    @apply ring-4 ring-purple-500/30;
+  }
+}
