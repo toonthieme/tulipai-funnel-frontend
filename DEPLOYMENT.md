@@ -48,7 +48,7 @@ NODE_ENV=production
 PORT=10000
 MONGODB_URI=mongodb+srv://tulipai_user:YOUR_PASSWORD@cluster0.xxxxx.mongodb.net/tulipai_production?retryWrites=true&w=majority
 JWT_SECRET=your-super-strong-random-secret-at-least-32-characters-long
-CORS_ORIGIN=https://funnel.tulipai.nl
+CORS_ORIGIN=https://tulipai-funnel-frontend.vercel.app
 EMAIL_FROM=noreply@tulipai.nl
 EMAIL_HOST=smtp.sendgrid.net
 EMAIL_PORT=587
@@ -56,7 +56,7 @@ EMAIL_USER=apikey
 EMAIL_PASSWORD=your-sendgrid-api-key
 ```
 
-**Your backend URL will be:** `https://tulipai-backend-xxxx.onrender.com`
+**Your backend URL will be:** `https://tulipai-funnel-backend.onrender.com`
 
 ## Step 3: Frontend Deployment (Vercel)
 
@@ -78,16 +78,16 @@ git push -u origin main
 
 ### Environment Variables (Vercel → Settings → Environment Variables)
 ```bash
-VITE_API_URL=https://tulipai-backend-xxxx.onrender.com/api
+VITE_API_URL=https://tulipai-funnel-backend.onrender.com/api
 ```
 
-**Your frontend URL will be:** `https://tulipai-funnel-xxxx.vercel.app`
+**Your frontend URL will be:** `https://tulipai-funnel-frontend.vercel.app`
 
 ## Step 4: Test Everything
 
 1. **Backend Health Check:**
    ```bash
-   curl https://tulipai-backend-xxxx.onrender.com/health
+   curl https://tulipai-funnel-backend.onrender.com/health
    ```
 
 2. **Frontend Test:**
@@ -120,13 +120,13 @@ TTL: Auto or 300
 ### Update CORS (after domain is live)
 Update Render environment variable:
 ```bash
-CORS_ORIGIN=https://funnel.tulipai.nl
+CORS_ORIGIN=https://tulipai-funnel-frontend.vercel.app
 ```
 
 ### Update Frontend API URL
 Update Vercel environment variable:
 ```bash
-VITE_API_URL=https://tulipai-backend-xxxx.onrender.com/api
+VITE_API_URL=https://tulipai-funnel-backend.onrender.com/api
 ```
 
 ### Change Admin Password

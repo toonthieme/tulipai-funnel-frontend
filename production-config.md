@@ -13,7 +13,7 @@ MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/tulipai_producti
 JWT_SECRET=your-super-strong-random-secret-min-32-chars
 
 # CORS (restrict to production domain only)
-CORS_ORIGIN=https://funnel.tulipai.nl
+CORS_ORIGIN=https://tulipai-funnel-frontend.vercel.app
 
 # Email Configuration
 EMAIL_FROM=noreply@tulipai.nl
@@ -64,7 +64,7 @@ pm2 start dist/app.js --name tulipai-backend
 Add this to your WordPress page/post:
 
 ```html
-<a href="https://funnel.tulipai.nl" 
+<a href="https://tulipai-funnel-frontend.vercel.app" 
    class="button button-primary" 
    target="_blank">
    Get Your AI Assessment
@@ -73,7 +73,7 @@ Add this to your WordPress page/post:
 
 Or as a popup:
 ```html
-<button onclick="window.open('https://funnel.tulipai.nl', 'funnel', 'width=1200,height=800')">
+<button onclick="window.open('https://tulipai-funnel-frontend.vercel.app', 'funnel', 'width=1200,height=800')">
    Start AI Assessment
 </button>
 ```
