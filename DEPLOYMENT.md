@@ -48,7 +48,9 @@ NODE_ENV=production
 PORT=10000
 MONGODB_URI=mongodb+srv://tulipai_user:YOUR_PASSWORD@cluster0.xxxxx.mongodb.net/tulipai_production?retryWrites=true&w=majority
 JWT_SECRET=your-super-strong-random-secret-at-least-32-characters-long
-CORS_ORIGIN=https://tulipai-funnel-frontend.vercel.app
+CORS_ORIGIN=https://funnel.tulipai.nl
+# Note: If using both custom domain and Vercel domain, use comma-separated values:
+# CORS_ORIGIN=https://funnel.tulipai.nl,https://tulipai-funnel-frontend.vercel.app
 EMAIL_FROM=noreply@tulipai.nl
 EMAIL_HOST=smtp.sendgrid.net
 EMAIL_PORT=587
